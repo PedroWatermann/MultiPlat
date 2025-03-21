@@ -17,7 +17,7 @@ namespace MultiPlat_X.Controllers
             {
                 List<ModPessoa> li = new List<ModPessoa>();
 
-                string sql = "SELECT * FROM pessoa";
+                string sql = "SELECT * FROM pessoas";
 
                 using (MySqlConnection conn = new MySqlConnection(conection))
                 {
@@ -57,7 +57,7 @@ namespace MultiPlat_X.Controllers
         {
             try
             {
-                string sql = "INSERT INTO pessoa (nome, cidade, celular) VALUES ('@nome', '@cidade', '@celular')";
+                string sql = "INSERT INTO pessoas (nome, cidade, celular) VALUES (@nome, @cidade, @celular)";
 
                 using (MySqlConnection conn = new MySqlConnection(conection))
                 {
@@ -86,7 +86,7 @@ namespace MultiPlat_X.Controllers
         {
             try
             {
-                string sql = "UPDATE pessoa SET nome = '@nome', cidade  = '@cidade', celular = '@celular' WHERE id_pessoa = @id_pessoa";
+                string sql = "UPDATE pessoas SET nome = @nome, cidade  = @cidade, celular = @celular WHERE id_pessoa = @id_pessoa";
 
                 using (MySqlConnection conn = new MySqlConnection(conection))
                 {
@@ -114,7 +114,7 @@ namespace MultiPlat_X.Controllers
 
         public static void Excluir(ModPessoa p)
         {
-            string sql = "DELETE FROM pessoa WHERE id_pessoa = @id_pessoa";
+            string sql = "DELETE FROM pessoas WHERE id_pessoa = @id_pessoa";
 
             using (MySqlConnection conn = new MySqlConnection(conection))
             {

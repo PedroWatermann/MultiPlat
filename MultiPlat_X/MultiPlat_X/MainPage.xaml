@@ -9,7 +9,7 @@
         </Frame>
 
         <Image
-            Source="mysql.png"
+            Source="cloud.png"
             Margin="20"/>
         <StackLayout
             HorizontalOptions="CenterAndExpand"
@@ -19,13 +19,19 @@
                 TextColor="Black"
                 BackgroundColor="White"
                 FontAttributes="Bold"
+                BorderWidth="2"
+                BorderColor="Black"
+                CornerRadius="50"
                 x:Name="btnCadastrar"
-                Clicked="btnCadastrar_Clicked_1"/>
+                Clicked="btnCadastrar_Clicked"/>
             <Button 
                 Text="Listar"
                 TextColor="Black"
                 BackgroundColor="White"
                 FontAttributes="Bold"
+                BorderWidth="2"
+                BorderColor="Black"
+                CornerRadius="50"
                 x:Name="btnListar"
                 Clicked="btnListar_Clicked"/>
             <Button 
@@ -33,7 +39,9 @@
                 TextColor="White"
                 BackgroundColor="Red"
                 FontAttributes="Bold"
-                CornerRadius="20"
+                BorderWidth="2"
+                BorderColor="Black"
+                CornerRadius="50"
                 x:Name="btnSair"
                 Clicked="btnSair_Clicked"/>
         </StackLayout>

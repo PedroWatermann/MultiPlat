@@ -3764,25 +3764,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pedro\\.nuget\\packages\\": {},
+    "C:\\Users\\Aluno\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pedro\\source\\repos\\PedroWatermann\\MultiPlat\\MultiPlat_X\\MultiPlat_X.Android\\MultiPlat_X.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Aluno\\source\\repos\\PedroWatermann\\MultiPlat\\MultiPlat_X\\MultiPlat_X.Android\\MultiPlat_X.Android.csproj",
       "projectName": "MultiPlat_X.Android",
-      "projectPath": "C:\\Users\\pedro\\source\\repos\\PedroWatermann\\MultiPlat\\MultiPlat_X\\MultiPlat_X.Android\\MultiPlat_X.Android.csproj",
-      "packagesPath": "C:\\Users\\pedro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pedro\\source\\repos\\PedroWatermann\\MultiPlat\\MultiPlat_X\\MultiPlat_X.Android\\obj\\",
+      "projectPath": "C:\\Users\\Aluno\\source\\repos\\PedroWatermann\\MultiPlat\\MultiPlat_X\\MultiPlat_X.Android\\MultiPlat_X.Android.csproj",
+      "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Aluno\\source\\repos\\PedroWatermann\\MultiPlat\\MultiPlat_X\\MultiPlat_X.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
-      "UsingMicrosoftNETSdk": false,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3796,16 +3795,11 @@
       "frameworks": {
         "monoandroid13.0": {
           "projectReferences": {
-            "C:\\Users\\pedro\\source\\repos\\PedroWatermann\\MultiPlat\\MultiPlat_X\\MultiPlat_X\\MultiPlat_X.csproj": {
-              "projectPath": "C:\\Users\\pedro\\source\\repos\\PedroWatermann\\MultiPlat\\MultiPlat_X\\MultiPlat_X\\MultiPlat_X.csproj"
+            "C:\\Users\\Aluno\\source\\repos\\PedroWatermann\\MultiPlat\\MultiPlat_X\\MultiPlat_X\\MultiPlat_X.csproj": {
+              "projectPath": "C:\\Users\\Aluno\\source\\repos\\PedroWatermann\\MultiPlat\\MultiPlat_X\\MultiPlat_X\\MultiPlat_X.csproj"
             }
           }
         }
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using System.Diagnostics;
 
 namespace MultiPlat_X
 {
@@ -14,20 +15,28 @@ namespace MultiPlat_X
         {
             InitializeComponent();
         }
-
-        private void btnCadastrar_Clicked_1(object sender, EventArgs e)
+        
+        private void btnCadastrar_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new PagCadastrar());
         }
 
         private void btnListar_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new PagListar());
         }
 
         private void btnSair_Clicked(object sender, EventArgs e)
         {
+            try
+            {
+                Process.GetCurrentProcess().Kill();
+            }
+            catch (Exception)
+            {
 
+                throw;
+            }
         }
     }
 }

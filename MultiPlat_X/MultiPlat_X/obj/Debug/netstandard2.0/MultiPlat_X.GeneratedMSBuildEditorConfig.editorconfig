@@ -1,8 +1,3 @@
 is_global = true
 build_property.RootNamespace = MultiPlat_X
-build_property.ProjectDir = C:\Users\pedro\source\repos\PedroWatermann\MultiPlat\MultiPlat_X\MultiPlat_X\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
-build_property.CsWinRTUseWindowsUIXamlProjections = false
-build_property.EffectiveAnalysisLevelStyle = 
-build_property.EnableCodeStyleSeverity = 
+build_property.ProjectDir = C:\Users\Aluno\source\repos\PedroWatermann\MultiPlat\MultiPlat_X\MultiPlat_X\

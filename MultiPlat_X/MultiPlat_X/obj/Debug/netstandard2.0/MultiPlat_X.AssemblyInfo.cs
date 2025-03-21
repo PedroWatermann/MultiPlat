@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MultiPlat_X")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f61cc5b94fca28e1980d049d7c12d8e5af6a0a0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("MultiPlat_X")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MultiPlat_X")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MultiPlat_X.PagUpDel"
+             Title="Atualizar / Apagar">
+    <ContentPage.Content>
+        <StackLayout
+            Padding="10">
+            <Label
+                Text="Nome: "
+                FontSize="20"
+                FontAttributes="Bold"/>
+            <Entry
+                x:Name="entNome"
+                Keyboard="Default"
+                Text="{Binding nome, Mode=TwoWay}"/>
+
+            <Label
+                Text="Cidade: "
+                FontSize="20"
+                FontAttributes="Bold"/>
+            <Entry
+                x:Name="entCidade"
+                Keyboard="Default"
+                Text="{Binding cidade, Mode=TwoWay}"/>
+
+            <Label
+                Text="Celular: "
+                FontSize="20"
+                FontAttributes="Bold"/>
+            <Entry
+                x:Name="entCelular"
+                Keyboard="Numeric"
+                Text="{Binding celular, Mode=TwoWay}"/>
+
+            <Button
+                Text="Atualizar"
+                BackgroundColor="White"
+                FontAttributes="Bold"
+                BorderWidth="2"
+                BorderColor="Black"
+                CornerRadius="50"
+                HorizontalOptions="FillAndExpand"
+                x:Name="btnAtualizar"
+                Clicked="btnAtualizar_Clicked"/>
+
+            <Button
+                Text="Apagar"
+                BackgroundColor="White"
+                FontAttributes="Bold"
+                BorderWidth="2"
+                BorderColor="Black"
+                CornerRadius="50"
+                HorizontalOptions="FillAndExpand"
+                x:Name="btnApagar"
+                Clicked="btnApagar_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
