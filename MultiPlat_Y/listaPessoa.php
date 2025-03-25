@@ -23,10 +23,11 @@ if ($registros > 0) {
         "
         <tbody>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>" . $registro['id'] . "</td>
+                    <td>" . $registro['nome'] . "</td>
+                    <td>" . $registro['cidade'] . "</td>
+                    <td>" . $registro['celular'] . "</td>
+                    <td><a href='editar.php?id=$id'>Editar</a> | <a href='excluir.php?id=$id'>Excluir</a></td>
                 </tr>
         ";
     }
@@ -35,4 +36,7 @@ if ($registros > 0) {
         </tbody>
         </table>
     ";
+} else {
+    echo "<center><h3>Nenhuma pessoa cadastrada!</h3></center>";
 }
+echo "Total de pessoas cadastradas: ".$registros;

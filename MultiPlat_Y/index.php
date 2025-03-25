@@ -40,7 +40,18 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    //FORMULÁRIO
+                    <form action="cadastro.php" method="post">
+                        <label>NOME</label>
+                        <input type="text" class="form-control" name="nome" require/>
+                        <br/>
+                        <label>CIDADE</label>
+                        <input type="text" class="form-control" name="cidade" require/>
+                        <br/>
+                        <label>CELULAR</label>
+                        <input type="text" class="form-control" name="celular" require/>
+                        <br/>
+                        <button type="submit" class="btn btn-outline-success">CADASTRAR</button>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
