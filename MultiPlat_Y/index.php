@@ -25,7 +25,7 @@
                         <h3><b>MULTIPLATAFORMA</b></h3>
                     </div>
                     <div class="card-body">
-                        //LISTAGEM
+                        <?php include "listaPessoa.php"?>
                     </div>
                 </div>
             </div>
