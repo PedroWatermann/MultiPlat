@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.Windows.Forms;
 using System.Data;
 using MySqlConnector;
 
@@ -48,9 +49,158 @@ namespace MultiPlat_W
 
                 return li;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageBox.Show($"Erro ao listar: {ex.Message}");
+                return null;
+            }
+        }
+
+        public void Inserir(Pessoa p)
+        {
+            try
+            {
+                string sql = "INSERT INTO pessoas (nome, cidade, celular) VALUES (@nome, @cidade, @celular)";
+
+                if (conn.State == ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
+
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+                cmd.Parameters.Add("@nome", MySqlDbType.String).Value = p.nome;
+                cmd.Parameters.Add("@cidade", MySqlDbType.String).Value = p.cidade;
+                cmd.Parameters.Add("@celular", MySqlDbType.String).Value = p.celular;
+                cmd.CommandType = CommandType.Text;
+                cmd.ExecuteNonQuery();
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao inserir: {ex.Message}");
+            }
+        }
+
+        public void Atualizar(Pessoa p)
+        {
+            try
+            {
+                string sql = "UPDATE pessoas SET nome = @nome, cidade = @cidade, celular = @celular WHERE id_pessoa = @id_pessoa";
+
+                if (conn.State == ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
+
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+                cmd.Parameters.Add("@nome", MySqlDbType.String).Value = p.nome;
+                cmd.Parameters.Add("@cidade", MySqlDbType.String).Value = p.cidade;
+                cmd.Parameters.Add("@celular", MySqlDbType.String).Value = p.celular;
+                cmd.Parameters.Add("@id_pessoa", MySqlDbType.Int32).Value = p.id_pessoa;
+                cmd.CommandType = CommandType.Text;
+                cmd.ExecuteNonQuery();
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao atualizar: {ex.Message}");
+            }
+        }
+
+        public void Excluir(int id_pessoa)
+        {
+            try
+            {
+                string sql = "DELETE FROM pessoas WHERE id_pessoa = @id_pessoa";
+
+                if (conn.State == ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
+
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+                cmd.Parameters.Add("@id_pessoa", MySqlDbType.String).Value = id_pessoa;
+                cmd.CommandType = CommandType.Text;
+                cmd.ExecuteNonQuery();
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao excluir: {ex.Message}");
+            }
+        }
+
+        public void Localizar(int id_pessoa)
+        {
+            try
+            {
+                string sql = "SELECT * FROM pessoas WHERE id_pessoa = @id_pessoa";
+
+                if (conn.State == ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
+
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+                cmd.Parameters.Add("@id_pessoa", MySqlDbType.String).Value = id_pessoa;
+                cmd.CommandType = CommandType.Text;
+                
+                MySqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    nome = dr["nome"].ToString();
+                    cidade = dr["cidade"].ToString();
+                    celular = dr["celular"].ToString();
+                }
+                dr.Close();
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao excluir: {ex.Message}");
+            }
+        }
+
+        public bool RegistroRepetido(string nome, string celular)
+        {
+            try
+            {
+                string sql = "SELECT * FROM pessoas WHERE nome = @nome AND celular = @celular";
+
+                if (conn.State == ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
+
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+                cmd.Parameters.Add("@nome", MySqlDbType.String).Value = nome;
+                cmd.Parameters.Add("@celular", MySqlDbType.String).Value = celular;
+                cmd.CommandType = CommandType.Text;
+                cmd.ExecuteNonQuery();
+
+                object res = cmd.ExecuteScalar();
+                if (res != null)
+                {
+                    conn.Close();
+                    return (int)res > 0;
+                }
+
+                conn.Close();
+                return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao excluir: {ex.Message}");
+                return false;
             }
         }
     }
