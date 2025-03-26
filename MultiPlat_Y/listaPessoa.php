@@ -19,11 +19,12 @@ if ($registros > 0) {
             </thead>
     ";
     while ($registro = $pessoas->fetch_array()) {
+        $id = $registro['id_pessoa'];
         echo 
         "
         <tbody>
                 <tr>
-                    <td>" . $registro['id'] . "</td>
+                    <td>" . $registro['id_pessoa'] . "</td>
                     <td>" . $registro['nome'] . "</td>
                     <td>" . $registro['cidade'] . "</td>
                     <td>" . $registro['celular'] . "</td>
@@ -39,4 +40,4 @@ if ($registros > 0) {
 } else {
     echo "<center><h3>Nenhuma pessoa cadastrada!</h3></center>";
 }
-echo "Total de pessoas cadastradas: ".$registros;
+echo "Total de pessoas cadastradas: $registros";

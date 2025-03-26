@@ -41,13 +41,13 @@
                 </div>
                 <div class="modal-body">
                     <form action="cadastro.php" method="post">
-                        <label>NOME</label>
+                        <label>Nome:</label>
                         <input type="text" class="form-control" name="nome" require/>
                         <br/>
-                        <label>CIDADE</label>
+                        <label>Cidade:</label>
                         <input type="text" class="form-control" name="cidade" require/>
                         <br/>
-                        <label>CELULAR</label>
+                        <label>Celular:</label>
                         <input type="text" class="form-control" name="celular" require/>
                         <br/>
                         <button type="submit" class="btn btn-outline-success">CADASTRAR</button>
